@@ -36,12 +36,11 @@ export function ProductCategorySection() {
 
         <div className="mt-12 grid gap-8 sm:mt-16 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
           <ScrollReveal direction="left">
-            <div className="relative overflow-hidden rounded-[1.25rem] bg-[#f8f2ef] shadow-[0_22px_70px_rgba(103,16,18,0.08)] ring-1 ring-brand-100/60 sm:rounded-[1.5rem]">
-              <div className="absolute left-0 top-0 h-full w-1 bg-[linear-gradient(180deg,#d71920,#f29aa1)]" />
+            <div className="relative overflow-hidden rounded-[1.25rem] bg-[#f8f2ef] shadow-[0_22px_70px_rgba(103,16,18,0.08)] ring-1 ring-brand-200 sm:rounded-[1.5rem]">
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="/PacktivePackaging/catalog/item-86.jpg"
-                  alt="Case study กล่องเซ็ต Packtive Packaging"
+                  src="/PacktivePackaging/image/ชุดขวดพลาสติก1.webp"
+                  alt="Case study ชุดขวดและกระปุกพลาสติก Packtive Packaging"
                   fill
                   sizes="(min-width: 1024px) 56vw, 100vw"
                   className="object-contain p-4 sm:p-8"
@@ -53,7 +52,7 @@ export function ProductCategorySection() {
           <ScrollReveal direction="right">
             <div className="lg:pl-8">
               <p className="text-sm font-black uppercase tracking-[0.18em] text-brand-700">Featured direction</p>
-              <h3 className="mt-3 text-2xl font-black leading-tight text-ink sm:text-3xl">Gift set ที่สื่อสารคุณภาพได้ตั้งแต่แรกเห็น</h3>
+              <h3 className="mt-3 text-2xl font-black leading-tight text-ink sm:text-3xl">ชุดขวดและกระปุกที่สื่อสารคุณภาพได้ตั้งแต่แรกเห็น</h3>
               <div className="mt-7 grid gap-6 sm:mt-8 sm:gap-7">
                 {decisions.map((item, index) => (
                   <ScrollReveal key={item.label} delay={index * 0.07}>

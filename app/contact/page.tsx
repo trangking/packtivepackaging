@@ -43,7 +43,7 @@ export default function ContactPage() {
             <Link
               key={channel.label}
               href={channel.href}
-              className={`focus-ring rounded-[1.1rem] p-5 shadow-[0_14px_40px_rgba(103,16,18,0.055)] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_22px_62px_rgba(103,16,18,0.10)] sm:rounded-[1.25rem] sm:p-6 ${
+              className={`focus-ring rounded-[1.1rem] p-5 shadow-crimson transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-crimson-lg sm:rounded-[1.25rem] sm:p-6 ${
                 channel.primary ? "bg-[linear-gradient(135deg,#b91018,#d71920)] text-white shadow-brand-900/15" : "border border-neutral-200/70 bg-white text-ink hover:border-brand-100"
               }`}
             >

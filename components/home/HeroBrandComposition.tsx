@@ -30,7 +30,7 @@ export function HeroBrandComposition() {
         pointerX.set(0);
         pointerY.set(0);
       }}
-      aria-label="Packtive Packaging gift box showcase"
+      aria-label="ภาพตัวอย่างชุดบรรจุภัณฑ์ Packtive Packaging"
     >
       <motion.div
         className="absolute inset-0"
@@ -59,8 +59,8 @@ export function HeroBrandComposition() {
           transition={{ duration: 9.5, repeat: Infinity, ease: "easeInOut" }}
         >
           <Image
-            src="/PacktivePackaging/catalog/item-86.jpg"
-            alt="กล่องเซ็ตบรรจุภัณฑ์ Packtive Packaging สำหรับนำเสนอสินค้าแบรนด์"
+            src="/PacktivePackaging/image/ชุดครีมพลาสติก7.webp"
+            alt="ชุดบรรจุภัณฑ์พลาสติกสำหรับสกินแคร์ Packtive Packaging"
             fill
             priority
             sizes="(min-width: 1280px) 52vw, (min-width: 1024px) 48vw, 94vw"

@@ -95,17 +95,17 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
             description="เลื่อนดูตัวอย่างสินค้าในหมวดนี้เพื่อเปรียบเทียบรูปทรง วัสดุ และแนวทางการนำเสนอ ก่อนเลือกสเปกที่เหมาะกับแบรนด์ของคุณ"
           />
           <div className="mt-10">
-            <ProductSwiper items={product.items} detailHref={`/products/${product.slug}`} />
+            <ProductSwiper items={product.items} />
           </div>
         </div>
       </section>
 
       <section className="section-y bg-neutral-50">
         <div className="container-px">
-          <SectionHeading eyebrow="Related categories" title="หมวดบรรจุภัณฑ์อื่นที่เกี่ยวข้อง" />
+          <SectionHeading title="หมวดบรรจุภัณฑ์อื่นที่เกี่ยวข้อง" />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((item) => (
-              <ProductCard key={item.slug} product={item} />
+              <ProductCard key={item.slug} product={item} linkMode="navigate" />
             ))}
           </div>
         </div>

@@ -11,6 +11,12 @@ html {
   overflow-x: hidden;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   background: #ffffff;
   color: #171717;
@@ -96,6 +102,10 @@ body {
 
   .product-swiper .swiper-pagination-bullet {
     @apply mx-1 h-2.5 w-2.5 bg-brand-600 opacity-25 transition-all duration-300;
+  }
+
+  .product-swiper .swiper-pagination-bullet:focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-brand-600 opacity-100;
   }
 
   .product-swiper .swiper-pagination-bullet-active {

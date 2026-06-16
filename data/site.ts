@@ -25,6 +25,25 @@ function createItems(category: string, items: CatalogItemInput[]) {
   }));
 }
 
+type RealCatalogItemInput = {
+  file: string;
+  title: string;
+};
+
+function realImage(fileName: string) {
+  return `/PacktivePackaging/image/${fileName}`;
+}
+
+function createRealItems(category: string, items: RealCatalogItemInput[]) {
+  return items.map((item, index) => ({
+    id: `${category}-${index + 1}`,
+    title: item.title,
+    category,
+    image: realImage(item.file),
+    alt: `${category} ${item.title} โดย Packtive Packaging`
+  }));
+}
+
 const pouchItems = createItems("ซองและถุงแพคเกจจิ้ง", [
   { id: 3, title: "ซองชาและเครื่องดื่มพิมพ์สี" },
   { id: 65, title: "ซองอาหารพร้อมทาน Packtive" },
@@ -66,64 +85,53 @@ const pouchItems = createItems("ซองและถุงแพคเกจจ
   { id: 33, title: "ซอง Natural Snacks แบบจัดวาง" }
 ]);
 
-const bottleItems = createItems("ขวดและดรอปเปอร์", [
-  { id: 60, title: "ขวดสกินแคร์ Packtive สีขาว" },
-  { id: 78, title: "ขวดเซรั่มใสบนพื้นฟ้า" },
-  { id: 81, title: "ขวดปั๊มและขวดสเปรย์" },
-  { id: 82, title: "ขวดดรอปเปอร์เซรั่มหลากสี" },
-  { id: 90, title: "ขวดแก้วใสแบบพกพา" },
-  { id: 97, title: "ขวดเซรั่มใสหลายขนาด" },
-  { id: 98, title: "ขวดปั๊มสกินแคร์สีชมพู" },
-  { id: 12, title: "ขวดดรอปเปอร์พร้อมกล่อง" },
-  { id: 14, title: "ขวดดรอปเปอร์ Amber Set" },
-  { id: 15, title: "ขวดดรอปเปอร์ Amber แบบเรียง" },
-  { id: 17, title: "ขวดดรอปเปอร์ The Ordinary" },
-  { id: 24, title: "ขวดสกินแคร์สีขาวหลายแบบ" },
-  { id: 32, title: "ขวดปั๊ม Mockup สีขาว" },
-  { id: 34, title: "เซ็ตขวดและกระปุกสกินแคร์" },
-  { id: 44, title: "ขวด Mist สีขาว" },
-  { id: 45, title: "ขวดเครื่องสำอางสีขาวชมพู" },
-  { id: 47, title: "เซ็ตขวดปั๊มสีเหลือง" },
-  { id: 48, title: "ขวดปั๊ม Fresh สีพีช" },
-  { id: 49, title: "ขวดปั๊ม Fresh สีเขียว" },
-  { id: 50, title: "ขวดแคปซูลสีเหลือง" },
-  { id: 51, title: "ขวดปั๊ม Fresh สีเหลือง" },
-  { id: 53, title: "เซ็ตขวดปั๊มและหลอด" },
-  { id: 54, title: "ขวดปั๊ม Fresh สีม่วง" },
-  { id: 61, title: "หัวดรอปเปอร์สีพาสเทล" },
-  { id: 62, title: "หัวดรอปเปอร์บนพื้นพีช" },
-  { id: 63, title: "หัวดรอปเปอร์บนพื้นเข้ม" },
-  { id: 64, title: "หัวดรอปเปอร์สีสด" },
-  { id: 92, title: "ขวด Roll-on สีพาสเทล" },
-  { id: 93, title: "ขวดเซรั่มสีชมพู" }
+const bottleItems = createRealItems("ขวดและดรอปเปอร์", [
+  { file: "ขวดปั๊มพลาสติก1.webp", title: "ขวดปั๊มพลาสติก แบบที่ 1" },
+  { file: "ขวดปั๊มพลาสติก2.webp", title: "ขวดปั๊มพลาสติก แบบที่ 2" },
+  { file: "ขวดปั๊มพลาสติก3.webp", title: "ขวดปั๊มพลาสติก แบบที่ 3" },
+  { file: "ขวดปั๊มพลาสติก4.webp", title: "ขวดปั๊มพลาสติก แบบที่ 4" },
+  { file: "ขวดฝาเกลียว1.webp", title: "ขวดฝาเกลียว แบบที่ 1" },
+  { file: "ขวดฝาเกลียว2.webp", title: "ขวดฝาเกลียว แบบที่ 2" },
+  { file: "ขวดฝาเกลียว3.webp", title: "ขวดฝาเกลียว แบบที่ 3" },
+  { file: "ขวดฝาเกลียว4.webp", title: "ขวดฝาเกลียว แบบที่ 4" },
+  { file: "ขวดสุญญากาศ1.webp", title: "ขวดสุญญากาศ แบบที่ 1" },
+  { file: "ขวดสูญญากาศ2.webp", title: "ขวดสุญญากาศ แบบที่ 2" },
+  { file: "ขวดสูญญากาศ3.webp", title: "ขวดสุญญากาศ แบบที่ 3" },
+  { file: "ขวดสุญญากาศ4.webp", title: "ขวดสุญญากาศ แบบที่ 4" },
+  { file: "ขวดสเปรย์สุญญากาศ1.webp", title: "ขวดสเปรย์สุญญากาศ แบบที่ 1" },
+  { file: "ขวดสเปรย์สุญญากาศ2.webp", title: "ขวดสเปรย์สุญญากาศ แบบที่ 2" },
+  { file: "ขวดสเปรย์สุญญากาศ3.webp", title: "ขวดสเปรย์สุญญากาศ แบบที่ 3" },
+  { file: "ขวดสเปรย์สุญญากาศ4.webp", title: "ขวดสเปรย์สุญญากาศ แบบที่ 4" },
+  { file: "ขวดแก้วฝาบีบ1.webp", title: "ขวดแก้วฝาบีบ แบบที่ 1" },
+  { file: "ขวดแก้วฝาบีบ2.webp", title: "ขวดแก้วฝาบีบ แบบที่ 2" },
+  { file: "ขวดแก้วฝาบีบ3.webp", title: "ขวดแก้วฝาบีบ แบบที่ 3" },
+  { file: "ขวดแก้วฝาบีบ4.webp", title: "ขวดแก้วฝาบีบ แบบที่ 4" }
 ]);
 
-const tubeItems = createItems("หลอดครีม", [
-  { id: 56, title: "หลอดครีม Fragrance สีพาสเทล" },
-  { id: 57, title: "หลอดครีม VIVI" },
-  { id: 58, title: "หลอดครีม Fragrance จัดวาง" },
-  { id: 55, title: "หลอดครีมสีฟ้า" },
-  { id: 6, title: "หลอดครีม Hand Cream" },
-  { id: 8, title: "หลอดครีมบนกระดาษคราฟต์" },
-  { id: 18, title: "หลอดครีม Ordinary" },
-  { id: 19, title: "หลอดครีมบนผ้าขาว" },
-  { id: 39, title: "หลอดครีมสีฟ้าและเขียว" },
-  { id: 52, title: "หลอดครีม Fresh สีขาวเหลือง" }
+const tubeItems = createRealItems("หลอดครีม", [
+  { file: "หลอดฝาหมุน1.webp", title: "หลอดฝาหมุน แบบที่ 1" },
+  { file: "หลอดฝาหมุน2.webp", title: "หลอดฝาหมุน แบบที่ 2" },
+  { file: "หลอดฝาหมุน3.webp", title: "หลอดฝาหมุน แบบที่ 3" },
+  { file: "หลอดฝาหมุน4.webp", title: "หลอดฝาหมุน แบบที่ 4" }
 ]);
 
-const jarItems = createItems("กระปุกครีม", [
-  { id: 80, title: "กระปุกครีมสีเขียวมิ้นต์" },
-  { id: 83, title: "กระปุกครีม Thepro สีฟ้า" },
-  { id: 84, title: "กระปุกครีม Thepro หลายขนาด" },
-  { id: 85, title: "กระปุกครีมเปิดฝา" },
-  { id: 87, title: "กระปุกครีมพร้อมกล่องลูกฟูก" },
-  { id: 88, title: "กระปุกครีม Thepro สีเทา" },
-  { id: 89, title: "กระปุกครีมสีพาสเทล" },
-  { id: 91, title: "กระปุกครีมสีเทาและชมพู" },
-  { id: 94, title: "กระปุกครีมสีขาวมินิมอล" },
-  { id: 95, title: "กระปุกครีมพร้อมกล่องสีชมพู" },
-  { id: 96, title: "กระปุกครีมสีสดหลายแบบ" },
-  { id: 0, title: "กระปุกและซองสินค้าไลฟ์สไตล์" }
+const jarItems = createRealItems("กระปุกครีม", [
+  { file: "กระปุกครีมพลาสติก5.webp", title: "กระปุกครีมพลาสติก แบบที่ 1" },
+  { file: "กระปุกครีมพลาสติก6.webp", title: "กระปุกครีมพลาสติก แบบที่ 2" },
+  { file: "กระปุกครีมพลาสติก8.webp", title: "กระปุกครีมพลาสติก แบบที่ 3" },
+  { file: "กระปุกครีมพลาสติก9.webp", title: "กระปุกครีมพลาสติก แบบที่ 4" },
+  { file: "กระปุกครีมพลาสติกและช้อน1.webp", title: "กระปุกครีมพลาสติกพร้อมช้อน แบบที่ 1" },
+  { file: "กระปุกครีมพลาสติกและช้อน2.webp", title: "กระปุกครีมพลาสติกพร้อมช้อน แบบที่ 2" },
+  { file: "กระปุกครีมพลาสติกและช้อน3.webp", title: "กระปุกครีมพลาสติกพร้อมช้อน แบบที่ 3" },
+  { file: "กระปุกครีมพลาสติกและช้อน4.webp", title: "กระปุกครีมพลาสติกพร้อมช้อน แบบที่ 4" },
+  { file: "กระปุกครีมแก้ว1.webp", title: "กระปุกครีมแก้ว แบบที่ 1" },
+  { file: "กระปุกครีมแก้ว2.webp", title: "กระปุกครีมแก้ว แบบที่ 2" },
+  { file: "กระปุกครีมแก้ว3.webp", title: "กระปุกครีมแก้ว แบบที่ 3" },
+  { file: "กระปุกครีมแก้ว4.webp", title: "กระปุกครีมแก้ว แบบที่ 4" },
+  { file: "กระปุกพลาสติก1.webp", title: "กระปุกพลาสติก แบบที่ 1" },
+  { file: "กระปุกพลาสติก2.webp", title: "กระปุกพลาสติก แบบที่ 2" },
+  { file: "กระปุกพลาสติก3.webp", title: "กระปุกพลาสติก แบบที่ 3" },
+  { file: "กระปุกพลาสติก4.webp", title: "กระปุกพลาสติก แบบที่ 4" }
 ]);
 
 const boxItems = createItems("กล่องและเซ็ตบรรจุภัณฑ์", [
@@ -211,22 +219,22 @@ export const processSteps = [
 
 export const portfolioItems = [
   {
-    title: "ซองอาหารพร้อมทาน Packtive",
-    category: "ซองและถุงแพคเกจจิ้ง",
-    image: imagePath(65),
-    alt: "ผลงานซองอาหารพร้อมทาน Packtive"
+    title: "ชุดขวดพลาสติกสำหรับสกินแคร์",
+    category: "ขวดและดรอปเปอร์",
+    image: realImage("ชุดขวดพลาสติก2.webp"),
+    alt: "ผลงานชุดขวดพลาสติกสำหรับสกินแคร์ โดย Packtive Packaging"
   },
   {
-    title: "กล่องเซ็ต Packtive",
-    category: "กล่องและเซ็ตบรรจุภัณฑ์",
-    image: imagePath(86),
-    alt: "ผลงานกล่องเซ็ตบรรจุภัณฑ์ Packtive"
-  },
-  {
-    title: "กระปุกครีม Thepro",
+    title: "ชุดกระปุกและขวดครีมพลาสติก",
     category: "กระปุกครีม",
-    image: imagePath(88),
-    alt: "ผลงานกระปุกครีม Thepro"
+    image: realImage("ชุดครีมพลาสติก5.webp"),
+    alt: "ผลงานชุดกระปุกและขวดครีมพลาสติก โดย Packtive Packaging"
+  },
+  {
+    title: "เซตเครื่องสำอางไลฟ์สไตล์",
+    category: "เครื่องสำอาง",
+    image: realImage("เครื่องสำอาง1.webp"),
+    alt: "ผลงานเซตบรรจุภัณฑ์เครื่องสำอางไลฟ์สไตล์ โดย Packtive Packaging"
   }
 ];
 
