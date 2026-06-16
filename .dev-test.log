@@ -1,0 +1,13 @@
+
+> packtive-packaging@0.1.0 dev
+> next dev --turbo -H 127.0.0.1 -p 3000
+
+  ▲ Next.js 14.2.5 (turbo)
+  - Local:        http://127.0.0.1:3000
+  - Network:      http://127.0.0.1:3000
+
+ ✓ Starting...
+ ✓ Ready in 1538ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1592ms
+ GET / 200 in 1819ms

@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: #ffffff;
+  color: #171717;
+  font-family: "Kanit", "Noto Sans Thai", ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "liga" 1, "kern" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  nav,
+  button,
+  .font-display {
+    font-family: "Kanit", "Noto Sans Thai", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+  }
+
+  p {
+    text-wrap: pretty;
+    overflow-wrap: anywhere;
+  }
+
+  p,
+  li,
+  address,
+  dd {
+    letter-spacing: 0;
+  }
+
+  ::selection {
+    background: #ffe1e1;
+    color: #671012;
+  }
+}
+
+@layer components {
+  .container-px {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-y {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  .eyebrow {
+    @apply text-sm font-bold uppercase tracking-[0.16em] text-brand-600;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600;
+  }
+
+  .fade-up {
+    animation: fade-up 0.65s ease both;
+  }
+
+  .float-slow {
+    animation: float-slow 7s ease-in-out infinite;
+  }
+
+  .float-slower {
+    animation: float-slower 8.5s ease-in-out infinite;
+  }
+
+  .product-swiper {
+    --swiper-theme-color: #d71920;
+    --swiper-navigation-size: 18px;
+  }
+
+  .product-swiper .swiper-pagination-bullet {
+    @apply mx-1 h-2.5 w-2.5 bg-brand-600 opacity-25 transition-all duration-300;
+  }
+
+  .product-swiper .swiper-pagination-bullet-active {
+    @apply w-7 rounded-full opacity-100;
+  }
+
+  .product-swiper .swiper-control.swiper-button-disabled {
+    @apply cursor-not-allowed opacity-35 hover:bg-white hover:text-brand-700;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-2deg);
+  }
+  50% {
+    transform: translate3d(0, -16px, 0) rotate(1deg);
+  }
+}
+
+@keyframes float-slower {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, 14px, 0);
+  }
+}

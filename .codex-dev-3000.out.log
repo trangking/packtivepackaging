@@ -1,0 +1,71 @@
+  ▲ Next.js 14.2.5 (turbo)
+  - Local:        http://127.0.0.1:3000
+  - Network:      http://127.0.0.1:3000
+
+ ✓ Starting...
+ ✓ Ready in 795ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1734ms
+ GET / 200 in 1502ms
+ GET / 200 in 2051ms
+ GET / 200 in 2102ms
+ ✓ Compiled in 98ms
+ ✓ Compiled in 80ms
+ ✓ Compiled in 90ms
+ ✓ Compiled in 76ms
+ ✓ Compiled in 77ms
+ ✓ Compiled in 73ms
+ ✓ Compiled in 100ms
+ ✓ Compiled in 90ms
+ ✓ Compiled / in 60ms
+ GET / 200 in 306ms
+ GET / 200 in 121ms
+ GET / 200 in 136ms
+ GET / 200 in 107ms
+ GET / 200 in 119ms
+ ✓ Compiled /products in 415ms
+ GET / 200 in 106ms
+ GET / 200 in 91ms
+ ✓ Compiled in 86ms
+ ✓ Compiled / in 42ms
+ ✓ Compiled / in 115ms
+ ✓ Compiled / in 118ms
+ ✓ Compiled in 102ms
+ ✓ Compiled / in 47ms
+ ✓ Compiled / in 48ms
+ ✓ Compiled / in 106ms
+ GET / 200 in 209ms
+ GET / 200 in 114ms
+ ✓ Compiled in 92ms
+ ✓ Compiled / in 36ms
+ GET / 200 in 120ms
+ GET / 200 in 125ms
+ GET / 200 in 123ms
+ ✓ Compiled /about in 179ms
+ GET / 200 in 132ms
+ GET / 200 in 154ms
+ GET / 200 in 114ms
+ GET / 200 in 108ms
+ ✓ Compiled in 79ms
+ ✓ Compiled in 61ms
+ ✓ Compiled in 63ms
+ ✓ Compiled / in 42ms
+ ✓ Compiled / in 89ms
+ ✓ Compiled / in 27ms
+ ✓ Compiled in 142ms
+ ✓ Compiled / in 76ms
+ GET / 200 in 152ms
+ ✓ Compiled in 75ms
+ ✓ Compiled / in 37ms
+ GET / 200 in 219ms
+ ✓ Compiled / in 90ms
+ ✓ Compiled / in 100ms
+ ✓ Compiled / in 98ms
+ ✓ Compiled in 67ms
+ ✓ Compiled / in 37ms
+ ✓ Compiled / in 25ms
+ ✓ Compiled in 76ms
+ ✓ Compiled / in 35ms
+ GET / 200 in 155ms
+ ✓ Compiled / in 103ms
+ GET / 200 in 115ms

@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-16T16:42:05Z",
+  "title": "Design System: Packtive Packaging",
+  "extensions": {
+    "colorMeta": {
+      "factory-crimson": { "role": "primary", "displayName": "Factory Crimson", "canonical": "#d71920", "tonalRamp": ["#3a0506", "#671012", "#8c0e12", "#b91018", "#d71920", "#e52626", "#ffe1e1", "#fff1f1"] },
+      "factory-crimson-deep": { "role": "primary-hover", "displayName": "Factory Crimson Deep", "canonical": "#b91018", "tonalRamp": ["#2e0608", "#671012", "#8f0e12", "#b91018", "#d71920", "#e2474a", "#f7c2c2", "#fde9e9"] },
+      "factory-crimson-shadow": { "role": "shadow-tint", "displayName": "Factory Crimson Shadow", "canonical": "#671012", "tonalRamp": ["#1f0405", "#671012", "#7e1014", "#971318", "#b3171c", "#cf2b30", "#e98d8f", "#f9d9d9"] },
+      "crimson-tint": { "role": "neutral-soft", "displayName": "Crimson Tint", "canonical": "#ffe1e1", "tonalRamp": ["#671012", "#b91018", "#d71920", "#e52626", "#ff9b9b", "#ffc6c6", "#ffe1e1", "#fff5f5"] },
+      "crimson-mist": { "role": "neutral-soft", "displayName": "Crimson Mist", "canonical": "#fff1f1", "tonalRamp": ["#671012", "#b91018", "#d71920", "#ff9b9b", "#ffd6d6", "#ffe9e9", "#fff1f1", "#fffafa"] },
+      "graphite-ink": { "role": "neutral-text", "displayName": "Graphite Ink", "canonical": "#171717", "tonalRamp": ["#0a0a0a", "#171717", "#262626", "#404040", "#737373", "#a3a3a3", "#d4d4d4", "#f5f5f5"] },
+      "paper-white": { "role": "neutral-bg", "displayName": "Paper White", "canonical": "#ffffff", "tonalRamp": ["#e5e5e5", "#ededed", "#f5f5f5", "#fafafa", "#fcfcfc", "#fefefe", "#ffffff", "#ffffff"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero H1 and section H2 headlines only." },
+      "body": { "displayName": "Body", "purpose": "Paragraph copy inside max-w-2xl/max-w-3xl containers." },
+      "label": { "displayName": "Eyebrow / Label", "purpose": "Uppercase section tags preceding headings; the system's signature pre-heading device." }
+    },
+    "shadows": [
+      { "name": "premium", "value": "0 24px 80px rgba(23,23,23,0.10)", "purpose": "Hero imagery frame, the most elevated neutral surface." },
+      { "name": "card", "value": "0 16px 48px rgba(23,23,23,0.08)", "purpose": "Default neutral elevated panel (floating captions, call-outs)." },
+      { "name": "crimson-ambient", "value": "0 14px 40px rgba(103,16,18,0.055)", "purpose": "Product/brand card resting shadow." },
+      { "name": "crimson-ambient-hover", "value": "0 22px 62px rgba(103,16,18,0.10)", "purpose": "Product/brand card hover shadow (deepens, no color change)." },
+      { "name": "button-glow", "value": "0 14px 34px rgba(215,25,32,0.22)", "purpose": "Primary button resting shadow; the one shadow using flat crimson instead of the deep shadow tint." },
+      { "name": "button-glow-hover", "value": "0 18px 42px rgba(215,25,32,0.24)", "purpose": "Primary button hover shadow." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.22,1,0.36,1)", "purpose": "Default easing for hover lifts, nav transitions, card scale." },
+      { "name": "duration-hover", "value": "300ms", "purpose": "Standard hover/transition duration for buttons, nav links, borders." },
+      { "name": "duration-image", "value": "700ms", "purpose": "Slower duration for image scale-on-hover (product cards)." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Highest-priority action per view, e.g. \"ขอใบเสนอราคา\" (request quote).",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">ขอใบเสนอราคา</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 20px; border-radius: 9999px; background: #d71920; color: #ffffff; font-weight: 600; font-size: 14px; font-family: Kanit, sans-serif; box-shadow: 0 14px 34px rgba(215,25,32,0.22); transition: all 0.3s cubic-bezier(0.22,1,0.36,1); text-decoration: none; } .ds-btn-primary:hover { background: #b91018; transform: translateY(-2px); box-shadow: 0 18px 42px rgba(215,25,32,0.24); } .ds-btn-primary:focus-visible { outline: 2px solid #d71920; outline-offset: 2px; } .ds-btn-primary:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Lower-commitment action beside a primary button, e.g. \"ขอคำปรึกษา\" (ask for advice).",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">ขอคำปรึกษา</a>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 20px; border-radius: 9999px; background: rgba(255,255,255,0.92); color: #b91018; border: 1px solid #ffe1e1; font-weight: 600; font-size: 14px; font-family: Kanit, sans-serif; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.22,1,0.36,1); text-decoration: none; } .ds-btn-secondary:hover { border-color: #ffd6d6; background: #fff1f1; transform: translateY(-2px); box-shadow: 0 14px 34px rgba(103,16,18,0.08); } .ds-btn-secondary:focus-visible { outline: 2px solid #d71920; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Tertiary/browse action, e.g. \"ดูหมวดสินค้า\" (view categories).",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">ดูหมวดสินค้า</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 20px; border-radius: 9999px; background: transparent; color: #171717; font-weight: 600; font-size: 14px; font-family: Kanit, sans-serif; transition: all 0.3s cubic-bezier(0.22,1,0.36,1); text-decoration: none; } .ds-btn-ghost:hover { background: #f5f5f5; transform: translateY(-2px); } .ds-btn-ghost:focus-visible { outline: 2px solid #d71920; outline-offset: 2px; }"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "product-card",
+      "description": "Product category card with photo, name, short description, and a 'view category' link.",
+      "html": "<article class=\"ds-product-card\"><div class=\"ds-product-card__media\"><span class=\"ds-product-card__tag\">ซองฟอยล์</span></div><div class=\"ds-product-card__body\"><h3 class=\"ds-product-card__title\">ซองฟอยล์บรรจุภัณฑ์</h3><p class=\"ds-product-card__desc\">วัสดุคุณภาพสูง ปรับขนาดได้ตามสินค้า</p><span class=\"ds-product-card__link\">ดูข้อมูลหมวดนี้</span></div></article>",
+      "css": ".ds-product-card { overflow: hidden; border-radius: 1.25rem; border: 1px solid rgba(229,229,229,0.7); background: #ffffff; box-shadow: 0 14px 40px rgba(103,16,18,0.055); transition: all 0.5s cubic-bezier(0.22,1,0.36,1); font-family: Kanit, sans-serif; } .ds-product-card:hover { transform: translateY(-4px); border-color: #ffe1e1; box-shadow: 0 22px 62px rgba(103,16,18,0.10); } .ds-product-card__media { position: relative; aspect-ratio: 4/3; background: radial-gradient(circle at 50% 38%, #ffffff 0%, #fff7f7 58%, #f3eeee 100%); padding: 16px; } .ds-product-card__tag { position: absolute; left: 16px; top: 16px; border-radius: 9999px; background: rgba(255,255,255,0.92); padding: 4px 12px; font-size: 12px; font-weight: 700; color: #b91018; box-shadow: 0 1px 2px rgba(0,0,0,0.05); } .ds-product-card__body { padding: 20px 24px; } .ds-product-card__title { font-size: 18px; font-weight: 900; color: #171717; line-height: 1.3; } .ds-product-card__desc { margin-top: 12px; font-size: 14px; line-height: 1.75; color: #525252; } .ds-product-card__link { margin-top: 20px; display: inline-flex; font-size: 14px; font-weight: 700; color: #b91018; transition: transform 0.3s; } .ds-product-card:hover .ds-product-card__link { transform: translateX(4px); }"
+    },
+    {
+      "name": "Eyebrow Label",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "Uppercase tag preceding a section heading or hero title — the system's signature pre-heading device.",
+      "html": "<p class=\"ds-eyebrow\">Packtive Packaging</p>",
+      "css": ".ds-eyebrow { font-family: Kanit, sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: #b91018; }"
+    },
+    {
+      "name": "Navigation Pill Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Desktop nav link; active state gets a tinted pill background, inactive gets a hover tint.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav__link ds-nav__link--active\" href=\"#\">หน้าแรก</a><a class=\"ds-nav__link\" href=\"#\">เกี่ยวกับเรา</a><a class=\"ds-nav__link\" href=\"#\">สินค้า</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 4px; font-family: Kanit, sans-serif; } .ds-nav__link { border-radius: 9999px; padding: 8px 14px; font-size: 14px; font-weight: 600; color: #404040; text-decoration: none; transition: all 0.3s; } .ds-nav__link:hover { background: #ffffff; color: #b91018; } .ds-nav__link--active { background: #fff1f1; color: #b91018; box-shadow: 0 1px 2px rgba(0,0,0,0.05); } .ds-nav__link:focus-visible { outline: 2px solid #d71920; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Premium Factory Floor",
+    "overview": "Packtive Packaging sells production capability to other businesses, not a feeling — so the system reads as a showroom built on top of a real factory: confident, exact, and unmistakably capable, with just enough polish that a brand manager trusts it on sight. Every surface stays paper-white and lets product photography do the convincing; the single crimson accent is reserved for the moments that move a visitor toward a quote, never spent on decoration. This system explicitly rejects the cluttered, discount-print-shop look of budget packaging vendors and the over-decorated, gradient-heavy \"AI generated\" landing page aesthetic — no purple/cyan gradients, no glassmorphism, no glow-for-glow's-sake. It also rejects flatness for its own sake: depth exists, but only as a soft, crimson-tinted ambient glow that signals \"this is the important thing,\" never as a hard drop shadow.",
+    "keyCharacteristics": [
+      "Single accent color (factory crimson) spent sparingly and only on action/identity moments",
+      "Paper-white canvas; product photography is the hero, never competing with UI chrome",
+      "Heavy display weight (font-black, 900) headlines paired with generous, airy body line-height",
+      "Soft, color-tinted ambient shadows instead of neutral black drop shadows",
+      "Pill-shaped, tactile buttons with a confident hover-lift on every interactive surface"
+    ],
+    "rules": [
+      { "name": "The One Red Rule", "body": "Factory Crimson (#d71920) is the only saturated color in the system. If a new screen needs a second \"loud\" color, that's a sign the page is doing too much — solve it with hierarchy (size, weight, white space), not a second hue.", "section": "colors" },
+      { "name": "The One Voice Rule", "body": "There is exactly one font family in this system. Never introduce a second typeface \"for variety\" — express hierarchy with the existing weight scale (300→900) and size, not a new font.", "section": "typography" },
+      { "name": "The Tinted-Not-Black Rule", "body": "Any shadow touching a brand surface (card, button, brand panel) is tinted with Factory Crimson Shadow (#671012) at low opacity, never neutral black. Generic content surfaces (hero image frame, floating caption) may use the neutral Premium/Card values instead.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep Factory Crimson (#d71920) as the only saturated color on any given screen — everything else is white, ink, or a crimson tint/shadow of that same hue.",
+      "Do use font-black (900) Kanit for every headline and font-normal (400) for body copy — weight contrast is the hierarchy system, not font changes.",
+      "Do tint shadows on brand surfaces with rgba(103,16,18, 0.05–0.10) instead of neutral black — see The Tinted-Not-Black Rule.",
+      "Do give every interactive element a hover lift (-translate-y-0.5 or greater) plus a deepened shadow, and always keep .focus-ring for keyboard accessibility.",
+      "Do let product photography fill the frame (object-contain/object-cover on a near-white backdrop) — imagery is the credibility signal, matching the napat-packaging.com reference's product-led approach."
+    ],
+    "donts": [
+      "Don't introduce a second saturated accent color (no purple, cyan, or secondary brand hue) — this breaks The One Red Rule and immediately reads as generic SaaS/AI-template design, which PRODUCT.md explicitly calls out as an anti-reference.",
+      "Don't use hard, small-blur, neutral-gray shadows (the \"2014 app\" look) — if a shadow looks crisp instead of soft and glowing, the blur radius is too small and/or the opacity is too high.",
+      "Don't add a second font family \"for variety\" in headlines, labels, or body copy.",
+      "Don't ship a cluttered, generic-print-shop layout (dense grids, no breathing room, stock photography) — this is the explicit anti-reference from PRODUCT.md and the opposite of the premium positioning.",
+      "Don't use sharp/square corners on cards or buttons — everything in this system rounds at minimum 0.5rem, and primary actions are always full pills."
+    ]
+  }
+}
