@@ -14,6 +14,10 @@ type ProductDetailPageProps = {
   params: { slug: string };
 };
 
+export function generateStaticParams() {
+  return products.map((product) => ({ slug: product.slug }));
+}
+
 export function generateMetadata({ params }: ProductDetailPageProps): Metadata {
   const product = products.find((item) => item.slug === params.slug);
   if (!product) {
