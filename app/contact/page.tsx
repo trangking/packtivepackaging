@@ -28,7 +28,7 @@ export default function ContactPage() {
             title="ขอใบเสนอราคา หรือปรึกษาแนวทางบรรจุภัณฑ์"
             description="ส่งรายละเอียดสินค้า จำนวนที่ต้องการ งบประมาณโดยประมาณ และ reference ที่มี ทีมงานจะช่วยประเมินสเปกเบื้องต้นและแนะนำแนวทางผลิตที่เหมาะสม"
           />
-          <div className="mt-8 rounded-[1.1rem] border border-brand-100/80 bg-white/92 p-5 shadow-[0_18px_54px_rgba(103,16,18,0.08)] backdrop-blur sm:rounded-[1.25rem] sm:p-6">
+          <div className="mt-8 rounded-[1.1rem] border border-brand-100/80 bg-white/92 p-5 shadow-[0_18px_54px_rgba(110,18,15,0.08)] backdrop-blur sm:rounded-[1.25rem] sm:p-6">
             <h2 className="text-xl font-black text-ink">ข้อมูลที่ช่วยให้ประเมินงานได้ชัดเจน</h2>
             <ul className="mt-4 grid gap-3 text-sm leading-7 text-neutral-600">
               <li>ประเภทสินค้าและขนาดโดยประมาณ</li>
@@ -44,7 +44,7 @@ export default function ContactPage() {
               key={channel.label}
               href={channel.href}
               className={`focus-ring rounded-[1.1rem] p-5 shadow-crimson transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-crimson-lg sm:rounded-[1.25rem] sm:p-6 ${
-                channel.primary ? "bg-[linear-gradient(135deg,#b91018,#d71920)] text-white shadow-brand-900/15" : "border border-neutral-200/70 bg-white text-ink hover:border-brand-100"
+                channel.primary ? "bg-[linear-gradient(135deg,#b31d18,#d8251f)] text-white shadow-brand-900/15" : "border border-neutral-200/70 bg-white text-ink hover:border-brand-100"
               }`}
             >
               <h2 className="text-2xl font-black">{channel.label}</h2>

@@ -61,8 +61,8 @@ body {
   }
 
   ::selection {
-    background: #ffe1e1;
-    color: #671012;
+    background: #f9dede;
+    color: #6e120f;
   }
 }
 
@@ -96,7 +96,7 @@ body {
   }
 
   .product-swiper {
-    --swiper-theme-color: #d71920;
+    --swiper-theme-color: #d8251f;
     --swiper-navigation-size: 18px;
   }
 

@@ -6,20 +6,20 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          50: "#fff1f1",
-          100: "#ffe1e1",
-          500: "#e52626",
-          600: "#d71920",
-          700: "#b91018",
-          900: "#671012"
+          50: "#fff1f0",
+          100: "#ffdfdb",
+          500: "#e63b30",
+          600: "#d8251f",
+          700: "#b31d18",
+          900: "#6e120f"
         },
-        ink: "#171717"
+        ink: "#1f2937"
       },
       boxShadow: {
         premium: "0 24px 80px rgba(23, 23, 23, 0.10)",
         card: "0 16px 48px rgba(23, 23, 23, 0.08)",
-        crimson: "0 14px 40px rgba(103, 16, 18, 0.055)",
-        "crimson-lg": "0 22px 62px rgba(103, 16, 18, 0.10)"
+        crimson: "0 14px 40px rgba(110,18,15, 0.055)",
+        "crimson-lg": "0 22px 62px rgba(110,18,15, 0.10)"
       }
     }
   },

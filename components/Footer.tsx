@@ -1,6 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { contact, products } from "@/data/site";
-import { Logo, PacktiveMark } from "./Logo";
+import { Logo } from "./Logo";
 
 const footerLinks = [
   { href: "/about", label: "เกี่ยวกับเรา" },
@@ -13,10 +14,11 @@ const footerLinks = [
 export function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-brand-100/70 bg-[#fff8f6] text-ink">
-      <PacktiveMark className="absolute -right-16 top-10 hidden h-80 w-80 text-brand-900/[0.04] sm:block" />
       <div className="container-px relative grid gap-9 py-12 sm:py-14 md:grid-cols-[1.4fr_1fr_1fr] md:gap-10">
         <div>
-          <Logo />
+          <div className="flex items-center gap-4">
+            <Logo />
+          </div>
           <p className="mt-5 max-w-md text-sm leading-7 text-neutral-700">
             Packtive Packaging ให้บริการออกแบบและผลิตบรรจุภัณฑ์สำหรับแบรนด์สินค้า โดยเน้นสเปกที่เหมาะสม ภาพลักษณ์ที่น่าเชื่อถือ และกระบวนการทำงานที่ตรวจสอบได้
           </p>

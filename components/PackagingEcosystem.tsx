@@ -85,8 +85,8 @@ export function PackagingEcosystem() {
         <div className="absolute left-[10%] top-[14%] h-[70%] w-[80%] rounded-[999px] bg-brand-50/70 blur-3xl" />
         <div className="absolute left-[15%] top-[21%] h-[54%] w-[70%] rounded-full border border-brand-100/70" />
         <div className="absolute left-[29%] top-[31%] h-[33%] w-[42%] rounded-full border border-neutral-200" />
-        <div className="absolute left-[50%] top-[18%] h-[66%] w-px -translate-x-1/2 bg-[linear-gradient(180deg,transparent,rgba(215,25,32,0.22),transparent)]" />
-        <div className="absolute left-[12%] top-[50%] h-px w-[76%] bg-[linear-gradient(90deg,transparent,rgba(215,25,32,0.18),transparent)]" />
+        <div className="absolute left-[50%] top-[18%] h-[66%] w-px -translate-x-1/2 bg-[linear-gradient(180deg,transparent,rgba(216,37,31,0.22),transparent)]" />
+        <div className="absolute left-[12%] top-[50%] h-px w-[76%] bg-[linear-gradient(90deg,transparent,rgba(216,37,31,0.18),transparent)]" />
         <PacktiveMark className="absolute left-[38%] top-[36%] h-36 w-36 text-brand-900/[0.045]" />
       </div>
 

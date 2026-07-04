@@ -1,13 +1,12 @@
+import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
-import { PacktiveMark } from "@/components/Logo";
 import { HeroBrandComposition } from "@/components/home/HeroBrandComposition";
 import { HeroParallaxLayer } from "@/components/motion/HeroParallaxLayer";
 
 export function HeroSection() {
   return (
     <section className="relative isolate -mt-16 overflow-hidden bg-[#fff8f8] pt-16 text-ink sm:-mt-[68px] sm:pt-[68px] lg:min-h-[92svh]">
-      <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_24%_38%,rgba(255,255,255,0.98),rgba(255,255,255,0.78)_36%,transparent_63%),radial-gradient(circle_at_76%_42%,rgba(215,25,32,0.12),transparent_34%),linear-gradient(115deg,#fffdfd_0%,#fff3f3_48%,#ffffff_100%)]" />
-      <PacktiveMark className="absolute -right-14 top-24 -z-10 hidden h-80 w-80 text-brand-900/[0.045] sm:block" />
+      <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_24%_38%,rgba(255,255,255,0.98),rgba(255,255,255,0.78)_36%,transparent_63%),radial-gradient(circle_at_76%_42%,rgba(216,37,31,0.12),transparent_34%),linear-gradient(115deg,#fffdfd_0%,#fff3f3_48%,#ffffff_100%)]" />
       <div className="absolute bottom-0 left-0 right-0 -z-10 h-36 bg-[linear-gradient(180deg,rgba(255,255,255,0),#ffffff)]" />
 
       <div className="container-px grid gap-8 py-10 sm:gap-10 sm:py-12 lg:min-h-[calc(92svh-68px)] lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-center lg:gap-16 xl:gap-20">

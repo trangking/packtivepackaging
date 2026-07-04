@@ -40,7 +40,7 @@ export function Navbar() {
       className={`sticky top-0 z-50 border-b backdrop-blur-xl transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
         onHero
           ? "border-white/70 bg-white/64 text-ink shadow-none"
-          : "border-brand-100/50 bg-white/94 text-ink shadow-[0_10px_34px_rgba(103,16,18,0.06)]"
+          : "border-brand-100/50 bg-white/94 text-ink shadow-[0_10px_34px_rgba(110,18,15,0.06)]"
       }`}
     >
       <nav className="container-px flex h-16 items-center justify-between sm:h-[68px]" aria-label="Main navigation">

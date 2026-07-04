@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import { portfolioItems } from "@/data/site";
 
-const featured = portfolioItems.slice(0, 2);
+const featured = portfolioItems.slice(0, 3);
 
 export function PortfolioSection() {
   return (
@@ -17,8 +17,8 @@ export function PortfolioSection() {
                 ตัวอย่างงานที่ช่วยให้สินค้าเล่าเรื่องแบรนด์ได้ชัดขึ้น
               </h2>
             </div>
-            <p className="max-w-2xl text-base leading-8 text-neutral-600 sm:text-lg sm:leading-9">
-              เราให้ความสำคัญกับทั้งภาพลักษณ์ การใช้งาน และความพร้อมในการผลิต เพื่อให้บรรจุภัณฑ์สนับสนุนการขายได้อย่างเป็นรูปธรรม
+            <p className="max-w-md text-base leading-8 text-neutral-600 sm:text-lg">
+              งานจริง พร้อมขาย พร้อมสร้างความน่าเชื่อถือให้แบรนด์
             </p>
           </div>
         </ScrollReveal>
@@ -27,7 +27,7 @@ export function PortfolioSection() {
           {featured.map((item, index) => (
             <ScrollReveal key={item.title} direction={index % 2 === 0 ? "left" : "right"}>
               <article className={`grid gap-6 sm:gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center ${index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}>
-                <div className="relative aspect-[4/3] overflow-hidden rounded-[1.25rem] bg-white shadow-[0_22px_70px_rgba(103,16,18,0.08)] ring-1 ring-neutral-200/70 sm:aspect-[16/11] sm:rounded-[1.5rem]">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-[1.25rem] bg-white shadow-[0_22px_70px_rgba(110,18,15,0.08)] ring-1 ring-neutral-200/70 sm:aspect-[16/11] sm:rounded-[1.5rem]">
                   <Image
                     src={item.image}
                     alt={item.alt}
@@ -39,13 +39,9 @@ export function PortfolioSection() {
                 <div className="lg:px-6">
                   <p className="text-sm font-black uppercase tracking-[0.16em] text-brand-700">{item.category}</p>
                   <h3 className="mt-4 text-2xl font-black leading-tight text-ink sm:text-3xl">{item.title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-neutral-600 sm:mt-5 sm:text-base sm:leading-8">
-                    วางองค์ประกอบสินค้าให้เหมาะกับการใช้งานหลายช่องทาง ทั้งหน้าร้าน ออนไลน์ และสื่อเปิดตัวแบรนด์ โดยคำนึงถึงความชัดของชื่อสินค้า สี และความรู้สึกแรกเห็น
+                  <p className="mt-4 text-sm leading-7 text-neutral-600 sm:mt-5 sm:text-base">
+                    ตัวอย่างงานจริงที่พร้อมใช้ขายได้ทันที
                   </p>
-                  <div className="mt-6 grid gap-3 rounded-[1rem] border border-neutral-200/80 bg-white/70 px-4 py-4 text-xs font-bold leading-6 text-neutral-700 shadow-sm sm:mt-7 sm:text-sm">
-                    <span>เป้าหมาย: ทำให้สินค้าดูพร้อมขายและน่าเชื่อถือ</span>
-                    <span>โฟกัส: โครงสร้าง ภาพลักษณ์ วัสดุ และการใช้งานจริง</span>
-                  </div>
                 </div>
               </article>
             </ScrollReveal>

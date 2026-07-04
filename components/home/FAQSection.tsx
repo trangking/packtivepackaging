@@ -12,8 +12,8 @@ export function FAQSection() {
             <h2 className="text-[1.75rem] font-black leading-[1.16] text-ink sm:text-4xl lg:text-5xl max-w-xl">
               ข้อมูลสำคัญก่อนเริ่มผลิตบรรจุภัณฑ์
             </h2>
-            <p className="mt-5 max-w-lg text-base leading-8 text-neutral-600 sm:text-lg sm:leading-9">
-              คำตอบเหล่านี้ช่วยให้คุณเตรียมข้อมูลได้ครบขึ้น และช่วยให้ทีมงานประเมินสเปก งบประมาณ และระยะเวลาได้ชัดเจนกว่าเดิม
+            <p className="mt-5 max-w-lg text-base leading-8 text-neutral-600 sm:text-lg">
+              สิ่งที่ลูกค้าถามบ่อยก่อนเริ่มสั่งผลิต
             </p>
             <Link
               href="/faq"

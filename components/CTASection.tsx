@@ -1,4 +1,4 @@
-import { PacktiveMark } from "@/components/Logo";
+import Image from "next/image";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { ButtonLink } from "./ButtonLink";
 
@@ -8,8 +8,7 @@ export function CTASection() {
   return (
     <section className="bg-[#fff7f7] py-14 sm:py-20">
       <div className="container-px">
-        <AnimatedSection variant="fade-up" className="relative overflow-hidden rounded-[1.25rem] bg-[linear-gradient(135deg,#b91018_0%,#d71920_52%,#ee757d_100%)] px-5 py-8 text-white shadow-[0_24px_70px_rgba(103,16,18,0.16)] sm:rounded-[1.5rem] sm:px-10 sm:py-10 lg:px-14">
-          <PacktiveMark className="absolute -right-12 -top-12 hidden h-48 w-48 text-white/10 sm:block sm:h-56 sm:w-56" />
+        <AnimatedSection variant="fade-up" className="relative overflow-hidden rounded-[1.25rem] bg-[linear-gradient(135deg,#b31d18_0%,#d8251f_52%,#ef6259_100%)] px-5 py-8 text-white shadow-[0_24px_70px_rgba(110,18,15,0.16)] sm:rounded-[1.5rem] sm:px-10 sm:py-10 lg:px-14">
           <div className="relative grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-10">
             <div>
               <p className="text-sm font-black uppercase tracking-[0.18em] text-white/78">Next step</p>
@@ -21,8 +20,13 @@ export function CTASection() {
               </p>
             </div>
 
-            <div className="rounded-[1rem] bg-white px-5 py-6 text-ink shadow-[0_22px_54px_rgba(103,16,18,0.16)] ring-1 ring-white/70 sm:rounded-[1.25rem] sm:px-7">
-              <h3 className="text-xl font-black">ข้อมูลที่ช่วยให้ประเมินราคาได้แม่นยำขึ้น</h3>
+            <div className="rounded-[1rem] bg-white px-5 py-6 text-ink shadow-[0_22px_54px_rgba(110,18,15,0.16)] ring-1 ring-white/70 sm:rounded-[1.25rem] sm:px-7">
+              <div className="flex items-center gap-3">
+                <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-lg ring-1 ring-neutral-200/70">
+                  <Image src="/PacktivePackaging/image/logo/Packtive Square Logo Banner Layout - 7.png" alt="Packtive Packaging" fill sizes="36px" className="object-contain" />
+                </span>
+                <h3 className="text-xl font-black">ข้อมูลที่ช่วยให้ประเมินราคาได้แม่นยำขึ้น</h3>
+              </div>
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
                 {checklist.map((item) => (
                   <div key={item} className="flex items-center gap-3 border-b border-neutral-200 pb-3 text-sm font-bold text-neutral-700">

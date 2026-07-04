@@ -16,7 +16,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <div className="overflow-hidden rounded-[1.25rem] border border-neutral-200/80 bg-white shadow-[0_16px_48px_rgba(103,16,18,0.055)]">
+    <div className="overflow-hidden rounded-[1.25rem] border border-neutral-200/80 bg-white shadow-[0_16px_48px_rgba(110,18,15,0.055)]">
       {items.map((item, index) => {
         const open = openIndex === index;
         const answerId = `faq-answer-${index}`;

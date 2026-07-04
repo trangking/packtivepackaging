@@ -4,7 +4,6 @@ import Link from "next/link";
 import type { SVGProps } from "react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CTASection } from "@/components/CTASection";
-import { PacktiveMark } from "@/components/Logo";
 import { PackagingEcosystem } from "@/components/PackagingEcosystem";
 import { SectionHeading } from "@/components/SectionHeading";
 import { highlights, productCategories } from "@/data/site";
@@ -73,7 +72,6 @@ export default function AboutPage() {
   return (
     <main>
       <section className="section-y relative overflow-hidden bg-[linear-gradient(180deg,#fff,#fff5f5)]">
-        <PacktiveMark className="absolute -left-16 top-24 hidden h-72 w-72 text-brand-900/[0.04] sm:block" />
         <div className="container-px grid gap-9 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-12">
           <div>
             <p className="eyebrow">About us</p>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type LogoVariant = "a" | "b" | "c";
@@ -7,37 +8,6 @@ type LogoProps = {
   variant?: LogoVariant;
   className?: string;
 };
-
-function PacktiveIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      width="48"
-      height="48"
-      viewBox="0 0 288 288"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      role="img"
-      aria-label="Packtive icon"
-    >
-      <rect width="288" height="288" fill="currentColor" />
-      <path
-        d="M144 47 243 104v113l-99 58-99-58V104l99-57Z"
-        stroke="white"
-        strokeWidth="17"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M70 147c12-36 49-34 74-3 25-31 62-33 74-3-13 34-49 36-74 3-25 33-62 31-74 3Z"
-        stroke="white"
-        strokeWidth="20"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
 function PacktiveMark({ className = "" }: { className?: string }) {
   return (
@@ -78,8 +48,8 @@ export function Logo({ inverted = false, variant = "b", className = "" }: LogoPr
       aria-label="Packtive Packaging กลับหน้าแรก"
       className={`focus-ring group inline-flex items-center gap-3 rounded-xl ${className}`}
     >
-      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-brand-600 text-brand-600 shadow-lg shadow-brand-600/25 transition group-hover:shadow-brand-600/35">
-        <PacktiveIcon className="h-11 w-11" />
+      <span className="relative grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-2xl shadow-lg shadow-brand-600/25 transition group-hover:shadow-brand-600/35">
+        <Image src="/PacktivePackaging/image/logo/Packtive Square Logo Banner Layout - 7.png" alt="" fill sizes="44px" className="object-contain" />
       </span>
 
       {variant === "a" ? (
@@ -98,4 +68,4 @@ export function Logo({ inverted = false, variant = "b", className = "" }: LogoPr
   );
 }
 
-export { PacktiveIcon, PacktiveMark };
+export { PacktiveMark };
