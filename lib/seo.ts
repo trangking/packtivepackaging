@@ -29,6 +29,11 @@ export function createMetadata({
       ...keywords
     ],
     alternates: { canonical: url },
+    icons: {
+      icon: "/PacktivePackaging/image/logo/packtive-icon-rounded.png",
+      shortcut: "/PacktivePackaging/image/logo/packtive-icon-rounded.png",
+      apple: "/PacktivePackaging/image/logo/packtive-icon-rounded.png"
+    },
     openGraph: {
       title,
       description,

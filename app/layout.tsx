@@ -5,7 +5,7 @@ import { createMetadata } from "@/lib/seo";
 import "./globals.css";
 
 export const metadata: Metadata = createMetadata({
-  title: "Packtive Packaging | ออกแบบและผลิตบรรจุภัณฑ์สำหรับแบรนด์สินค้า",
+  title: "Packtive Packaging",
   description:
     "Packtive Packaging ให้บริการออกแบบและผลิตบรรจุภัณฑ์สำหรับแบรนด์สินค้า เช่น ซองฟอยล์ หลอดครีม กระปุก ขวดเซรั่ม ขวดปั๊ม กล่อง และบรรจุภัณฑ์เครื่องสำอาง พร้อมให้คำแนะนำด้านสเปกและงานผลิต",
   keywords: ["โรงงานแพคเกจจิ้ง", "ผลิตบรรจุภัณฑ์", "ออกแบบแพคเกจจิ้ง", "บรรจุภัณฑ์สินค้า"]
